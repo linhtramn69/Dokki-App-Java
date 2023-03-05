@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".giaodien.ThongTinNhanVien"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_hoten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_hoten"
+            style="@style/TextStyle"
+            android:hint="Họ tên"
+            android:background="@color/white"
+            android:textColor="#0000FF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_ngaysinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_ngaysinh"
+            style="@style/TextStyle"
+            android:hint="Ngày sinh"
+            android:background="@color/white"
+            android:textColor="#0000FF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/grp_gioitinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp">
+        <RadioButton
+            android:id="@+id/rdo_nam"
+            style="@style/LabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Nam" />
+        <RadioButton
+            android:id="@+id/rdo_nu"
+            style="@style/LabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Nữ" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_sdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_sdt"
+            style="@style/TextStyle"
+            android:hint="Số điện thoại"
+            android:background="@color/white"
+            android:textColor="#0000FF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_them"
+            style="@style/ButtonStyle"
+            android:onClick="ThemNhanVien"
+            android:text="Thêm" />
+        <Button
+            android:id="@+id/btn_luu"
+            style="@style/ButtonStyle"
+            android:onClick="LuuNhanVien"
+            android:text="Lưu" />
+        <Button
+            android:id="@+id/btn_xoa"
+            style="@style/ButtonStyle"
+            android:onClick="XoaNhanVien"
+            android:text="Xóa" />
+        <Button
+            android:id="@+id/btn_dong"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:onClick="DongActivity"
+            android:text="Đóng" />
+    </LinearLayout>
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1">-->
+<!--        <TextView-->
+<!--            android:id="@+id/txt_thongtin"-->
+<!--            style="@style/LabelStyle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content" />-->
+<!--    </ScrollView>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:text="Thông tin nhân viên"
+        android:layout_height="80dp"/>
+    <ListView
+        android:id="@+id/lst_nhanvien"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice" />
+</LinearLayout>
